@@ -1,0 +1,1 @@
+include ':app', ':sweet-dialog', ':permission', ':tab_fragment_replace', ':space_bottom_tab_with_viewpager', ':FlycoTabLayout_Lib', ':slidingRootNav', ':recycler_adapter'

@@ -1,0 +1,36 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    testOptions.unitTests.all {
+        // unitTests.returnDefaultValues = true
+        // Always show the result of every unit test, even if it passes.
+        testLogging {
+            events 'passed', 'skipped', 'failed', 'standardOut', 'standardError'
+        }
+    }
+}
+
+dependencies {
+    api rootProject.ext.rxJava
+    implementation rootProject.ext.supportAnnotations
+    implementation rootProject.ext.supportFragment
+
+
+}
+
+// Commented to use JitPack instead of bintray
+//apply from: 'install.gradle'
+//apply from: 'bintray.gradle'

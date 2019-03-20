@@ -1,0 +1,43 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.2.0'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.2.51"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext  {
+    kotlin_version = '1.2.51'
+    rxJava= 'io.reactivex.rxjava2:rxjava:2.1.16'
+    junit= 'junit:junit:4.12'
+    truth= 'com.google.truth:truth:0.28'
+    robolectric= 'org.robolectric:robolectric:3.3'
+    mockito= "org.mockito:mockito-core:2.8.9"
+    kotlin="org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    supportLibraryVersion= '28.0.0'
+    minSdkVersion= 15
+    compileSdkVersion= 28
+    targetSdkVersion= 28
+    supportAnnotations= "com.android.support:support-annotations:$supportLibraryVersion"
+    supportFragment = "com.android.support:support-fragment:$supportLibraryVersion"
+}
