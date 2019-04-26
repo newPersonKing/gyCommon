@@ -55,25 +55,6 @@ public class MainActivity extends BaseRxBindingActivity {
 
         RxKeys(et_one);
 
-//        btn.setOnTouchListener(new View.OnTouchListener() {
-//            @Override
-//            public boolean onTouch(View v, MotionEvent event) {
-//                switch (event.getAction()){
-//                    case MotionEvent.ACTION_DOWN:
-//                        lastX = event.getRawX();
-//                        lastY = event.getRawY();
-//                        break;
-//                    case MotionEvent.ACTION_MOVE:
-//                        float dx = event.getRawX() - lastX;
-//                        float dy = event.getRawY() - lastY;
-//                        lastX = event.getRawX();
-//                        lastY = event.getRawY();
-//                        btn.setTranslationX(btn.getTranslationX()+dx);
-//                        break;
-//                }
-//                return false;
-//            }
-//        });
         RxDrags(btn);
     }
 
